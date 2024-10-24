@@ -1,0 +1,55 @@
+GitHub'a proje yüklemek için şu adımları takip edebilirsin:
+Git'i İndir ve Kur: Git web sitesinden indir ve kur.
+Depo Oluştur: GitHub'da yeni bir depo oluştur.
+Proje Dizini Seç: Komut satırını aç ve projeye git.
+
+cd proje-dizin
+Projenin Takip Edilmesi:
+
+git init
+git add .
+git commit -m "İlk yükleme"
+Uzak Depoyu Bağla ve Gönder:
+
+git remote add origin https://github.com/kullanıcı_adı/depo_adı.git
+git push -u origin master
+Bu adımlarla projen başarıyla GitHub'a yüklenmiş olur!
+
+fatal: repository 'https://github.com/kullanici_adin/depo_adi.git/' not found
+
+Bu hata, GitHub üzerinde belirttiğin depo URL'sinin bulunamadığını gösteriyor. Bu hatayı düzeltmek için aşağıdaki adımları kontrol et:
+
+Depo Adını Doğru Gir: GitHub'daki kullanıcı adını ve depo adını kontrol et. Örneğin, URL şu şekilde olmalıdır:
+
+https://github.com/kullanici_adin/depo_adi.git
+Depo Oluştur: Eğer GitHub'da henüz bir depo oluşturmadıysan, önce GitHub'da yeni bir depo oluştur.
+
+Uzak Depoyu Güncelle: Hatalı URL'yi düzeltmek için:
+
+git remote set-url origin https://github.com/kullanici_adin/depo_adi.git
+
+error: failed to push some refs to '...git'
+Bu hata genellikle yerel depo ile uzak depo arasında senkronizasyon problemi olduğunda ortaya çıkar. Çözmek için aşağıdaki adımları dene:
+git pull origin main --rebase
+git push origin main
+
+From https://github.com/onder7/...
+
+ * [new branch]      main       -> origin/main
+Successfully rebased and updated refs/heads/master.
+PS C:\wamp64\www\...n> git push origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/onder7/O365Integration.git'
+PS C:\wamp64\www\..>
+
+Hata mesajı, şu anki yerel şubenin (branch) adının master olduğunu, ancak main olarak push etmeye çalıştığını gösteriyor. Bu problemi çözmek için yerel şubenin adını değiştirebilir veya doğru şube adıyla push yapabilirsin.
+
+git branch
+git push origin master
+git branch -M main
+git push origin main
+
+GitHub'daki açıklamanıza (README.md gibi) resim eklemek için aşağıdaki adımları takip edebilirsiniz:
+![Resim Açıklaması](images/resim_adı.png)
+
+
